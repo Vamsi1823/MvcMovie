@@ -57,3 +57,50 @@ Tested the application and it was successful.
 
 Task5
 Work with a database in an ASP.NET Core MVC app
+The MvcMovieContext is configured to connect to the database and map Movie objects to records, registered in the Dependency Injection container. 
+The ASP.NET Core Configuration system reads the ConnectionString key, retrieved from the appsettings.json file for local development. 
+To inspect the database, use SQL Server Object Explorer (SSOX), right-click on the Movie table to view its structure in the Designer, noting the default primary key property named ID. 
+Additionally, explore the table data by right-clicking on the Movie table and selecting "View Data" in SSOX.
+
+2024-01-28
+2000
+
+Task6
+Controller methods and views
+In the Movie app, adjustments to the presentation are made in the Models/Movie.cs file, adding annotations such as [Display] and [DataType] to enhance field names like "Release Date" and specify data types. 
+Additionally, a [Column(TypeName = "decimal(18, 2)")] annotation ensures proper mapping of Price to currency in the database through Entity Framework Core. 
+The Movies controller utilizes Core MVC Anchor Tag Helpers to generate Edit, Details, and Delete links dynamically in the Views/Movies/Index.cshtml file.
+Tag Helpers, allowing server-side code in Razor files, facilitate URL generation. 
+In the Movies controller, the Edit actions, both HTTP GET and POST, handle movie editing and form submissions. 
+The [Bind] attribute guards against over-posting, and the [ValidateAntiForgeryToken] attribute, paired with an anti-forgery token, prevents CSRF attacks. 
+The HttpGet Edit method fetches movie details, and the associated view template specifies the expected model type. 
+Various Tag Helpers streamline HTML markup for labels, input elements, and validation messages. 
+Running the application and navigating to /Movies allows inspection of the generated HTML for the <form> element in the browser source.
+
+
+2024-01-30
+2200
+
+Task7
+Add search to an ASP.NET Core MVC app
+In this section, the Movie app's Index action method in Controllers/MoviesController.cs is enhanced to incorporate search functionality by genre or name. 
+The LINQ query for movie selection is modified conditionally based on the searchString parameter. 
+The searchString, when containing a string, filters movies by title using a Lambda Expression in the LINQ query. 
+The Index method can be configured to use the id parameter instead of searchString, allowing users to pass the search title as route data. 
+However, to simplify user interaction, a <form> element is added to Views/Movies/Index.cshtml using the Form Tag Helper, enabling users to filter movies conveniently. 
+The form specifies HTTP GET for capturing search information in the URL. 
+To extend the search capability, a MovieGenreViewModel class is introduced in the Models folder, containing a list of movies, a SelectList of genres for user selection, MovieGenre for the selected genre, and SearchString for the entered text. 
+The Index method in MoviesController.cs is updated to support search by genre. Finally, the Index.cshtml file in Views/Movies/ is adjusted to include search by genre, and a lambda expression in the HTML Helper is used to dynamically determine the display name for the Title property without causing access violations. 
+The app is then tested for searching by genre, movie title, and a combination of both.
+
+2024-01-31
+2330
+
+Task8
+Add a new field to an ASP.NET Core MVC app
+
+In this section, Entity Framework Code First Migrations is employed to add a new field, Rating, to the Movie model and synchronize it with the database. 
+The Rating property is added to the Models/Movie.cs file, and the [Bind] attribute in both the Create and Edit action methods of MoviesController.cs is updated to include the new Rating property. 
+View templates (Index.cshtml, Create.cshtml, etc.) are modified to display, create, and edit the Rating field. 
+The SeedData class is updated to provide a value for the new column in each Movie entry.
+
