@@ -125,3 +125,12 @@ The validation UI is automatically generated based on these rules, requiring no 
 The ModelState.IsValid method evaluates validation attributes and returns true if the object has no validation errors, facilitating seamless form processing. 
 By combining attributes on one line and leveraging DataType attributes for improved data formatting, the validation logic is streamlined and more efficient.
 
+2024-02-08
+1300
+
+Task10
+Examine the Details and Delete methods of an ASP.NET Core app
+
+Examined the Details and Delete method in all the controller modules.
+Changed the Git repository to public.
+Commit the results and pushed to code to Git.
