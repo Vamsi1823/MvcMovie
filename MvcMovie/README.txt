@@ -2,6 +2,7 @@
 1830
 
 Task 1
+
 Successfully installed Visual Studio 2022 Community edition.
 Created a web application by following the instructions.
 Started the application without debugging.
@@ -9,6 +10,7 @@ Started the application without debugging.
 Completed Part 1.
 
 Task 2
+
 Added a controller as HelloWorldController1 with the code mentioned in the instructions.
 Successfully able to display the output in the web browser that prints name and numtimes.
 
@@ -61,8 +63,8 @@ Work with a database in an ASP.NET Core MVC app
 
 The MvcMovieContext is configured to connect to the database and map Movie objects to records, registered in the Dependency Injection container. 
 The ASP.NET Core Configuration system reads the ConnectionString key, retrieved from the appsettings.json file for local development. 
-To inspect the database, use SQL Server Object Explorer (SSOX), right-click on the Movie table to view its structure in the Designer, noting the default primary key property named ID. 
-Additionally, explore the table data by right-clicking on the Movie table and selecting "View Data" in SSOX.
+To inspect the database, I use SQL Server Object Explorer (SSOX), right-clicked on the Movie table to view its structure in the Designer, noting the default primary key property named ID. 
+Additionally, I explored the table data by right-clicking on the Movie table and selecting "View Data" in SSOX.
 
 2024-01-28
 2000
@@ -71,7 +73,7 @@ Task6
 Controller methods and views
 
 In the Movie app, some adjustments to the presentation are made in the Models/Movie.cs file, adding annotations such as [Display] and [DataType] to enhance field names like "Release Date" and specify data types. 
-Additionally, a [Column(TypeName = "decimal(18, 2)")] annotation ensures proper mapping of Price to currency in the database through Entity Framework Core. 
+Additionally, a [Column(TypeName = "decimal(18, 2)")] annotation added to ensures proper mapping of Price to currency in the database through Entity Framework Core. 
 The Movies controller utilizes Core MVC Anchor Tag Helpers to generate Edit, Details, and Delete links dynamically in the Views/Movies/Index.cshtml file.
 Tag Helpers, allowing server-side code in Razor files, facilitate URL generation. 
 In the Movies controller, the Edit actions, both HTTP GET and POST, handle movie editing and form submissions. 
@@ -104,7 +106,7 @@ Task8
 Add a new field to an ASP.NET Core MVC app
 
 In this section, Entity Framework Code First Migrations is employed to add a new field, Rating, to the Movie model and synchronize it with the database. 
-The Rating property is added to the Models/Movie.cs file, and the [Bind] attribute in both the Create and Edit action methods of MoviesController.cs is updated to include the new Rating property. 
+I have added Rating property to the Models/Movie.cs file, and the [Bind] attribute in both the Create and Edit action methods of MoviesController.cs is updated to include the new Rating property. 
 View templates are modified to display, create, and edit the Rating field. 
 The SeedData class is updated to provide a value for the new column in each Movie entry.
 
@@ -115,8 +117,8 @@ Task9
 Add validation to an ASP.NET Core MVC app
 
 In this section, validation logic is integrated into the Movie model to enforce rules whenever a user creates or edits a movie. 
-The DataAnnotations namespace offers a set of built-in validation attributes like Required, StringLength, RegularExpression, Range, and DataType, which are applied to the Movie class properties to define validation rules. 
-The Range attribute restricts values to within a specified range, and StringLength sets maximum and optional minimum lengths for string properties. 
+I have added DataAnnotation namespace. Where DataAnnotations namespace offers built-in validation attributes like Required, StringLength, RegularExpression, Range, and DataType.
+Added Range attribute which restricts values to within a specified range, and StringLength sets maximum and optional minimum lengths for string properties. 
 Additionally, DataType attributes, such as DataType.Date and DataType.Currency, provide formatting hints to the view engine. 
 When invalid data is submitted, both client-side and server-side validation errors are displayed, adhering to the DRY principle by defining validation rules once in the model class. 
 The validation UI is automatically generated based on these rules, requiring no modifications to the controller or view templates. 
