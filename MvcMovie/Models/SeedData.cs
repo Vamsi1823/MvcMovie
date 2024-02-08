@@ -22,35 +22,43 @@ public static class SeedData
             context.Movie.AddRange(
                 new Movie
                 {
-                    Title = "When Harry Met Sally",
-                    ReleaseDate = DateTime.Parse("1989-2-12"),
-                    Genre = "Romantic Comedy",
-                    Rating = "R",
-                    Price = 7.99M
+                    Title = "RRR",
+                    ReleaseDate = DateTime.Parse("2022-03-24"),
+                    Genre = "Drama",
+                    Rating = "9",
+                    Price = 8M
                 },
                 new Movie
                 {
-                    Title = "Ghostbusters ",
-                    ReleaseDate = DateTime.Parse("1984-3-13"),
+                    Title = "KGF ",
+                    ReleaseDate = DateTime.Parse("2018-12-20"),
+                    Genre = "Action",
+                    Rating = "8",
+                    Price = 6M
+                },
+                new Movie
+                {
+                    Title = "Baahubali",
+                    ReleaseDate = DateTime.Parse("2015-07-09"),
                     Genre = "Comedy",
-                    Rating = "R",
-                    Price = 8.99M
+                    Rating = "9",
+                    Price = 6M
                 },
                 new Movie
                 {
-                    Title = "Ghostbusters 2",
-                    ReleaseDate = DateTime.Parse("1986-2-23"),
-                    Genre = "Comedy",
-                    Rating = "R",
-                    Price = 9.99M
+                    Title = "Saaho",
+                    ReleaseDate = DateTime.Parse("2019-08-30"),
+                    Genre = "Thriller",
+                    Rating = "7.5",
+                    Price = 2M
                 },
                 new Movie
                 {
-                    Title = "Rio Bravo",
-                    ReleaseDate = DateTime.Parse("1959-4-15"),
-                    Genre = "Western",
-                    Rating = "R",
-                    Price = 3.99M
+                    Title = "War",
+                    ReleaseDate = DateTime.Parse("2019-10-02"),
+                    Genre = "Action/Thriller",
+                    Rating = "5",
+                    Price = 5M
                 }
             );
             context.SaveChanges();
