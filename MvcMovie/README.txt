@@ -67,7 +67,7 @@ Additionally, explore the table data by right-clicking on the Movie table and se
 
 Task6
 Controller methods and views
-In the Movie app, adjustments to the presentation are made in the Models/Movie.cs file, adding annotations such as [Display] and [DataType] to enhance field names like "Release Date" and specify data types. 
+In the Movie app, some adjustments to the presentation are made in the Models/Movie.cs file, adding annotations such as [Display] and [DataType] to enhance field names like "Release Date" and specify data types. 
 Additionally, a [Column(TypeName = "decimal(18, 2)")] annotation ensures proper mapping of Price to currency in the database through Entity Framework Core. 
 The Movies controller utilizes Core MVC Anchor Tag Helpers to generate Edit, Details, and Delete links dynamically in the Views/Movies/Index.cshtml file.
 Tag Helpers, allowing server-side code in Razor files, facilitate URL generation. 
@@ -101,6 +101,6 @@ Add a new field to an ASP.NET Core MVC app
 
 In this section, Entity Framework Code First Migrations is employed to add a new field, Rating, to the Movie model and synchronize it with the database. 
 The Rating property is added to the Models/Movie.cs file, and the [Bind] attribute in both the Create and Edit action methods of MoviesController.cs is updated to include the new Rating property. 
-View templates (Index.cshtml, Create.cshtml, etc.) are modified to display, create, and edit the Rating field. 
+View templates are modified to display, create, and edit the Rating field. 
 The SeedData class is updated to provide a value for the new column in each Movie entry.
 
