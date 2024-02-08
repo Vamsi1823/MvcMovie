@@ -13,6 +13,7 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+// Creating a new scope to resolve services
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
